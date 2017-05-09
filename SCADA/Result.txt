@@ -1,0 +1,64 @@
+Locs SetBlocksRamMap
+		Conn	DevType	Addr	Len	Dup	iB.type	iB.ml	type	pData	pPreDt	pUpdate	useUpdate
+
+Locs Pass1::normalLocs before opt
+		Conn	DevType	Addr	Len	Dup	iB.type	iB.ml	type	pData	pPreDt	pUpdate	useUpdate
+0:  	1		194			0		0		3		0			0		0		0		0			0			0
+1:  	1		192			1		0		1		0			0		0		0		0			0			0
+2:  	1		192			0		0		1		0			0		0		0		0			0			0
+3:  	1		192			2		0		1		0			0		0		0		0			0			0
+4:  	1		192			3		0		1		0			0		0		0		0			0			0
+5:  	1		192			8		0		1		0			0		0		0		0			0			0
+
+Locs Pass1::pIRCALocs before opt
+		Conn	DevType	Addr	Len	Dup	iB.type	iB.ml	type	pData	pPreDt	pUpdate	useUpdate
+0:  	1		194			0		0		3		0			0		0		0		0			0			0
+1:  	1		192			1		0		1		0			0		0		0		0			0			0
+2:  	1		192			0		0		1		0			0		0		0		0			0			0
+3:  	1		192			2		0		1		0			0		0		0		0			0			0
+4:  	1		192			3		0		1		0			0		0		0		0			0			0
+5:  	1		192			8		0		1		0			0		0		0		0			0			0
+
+Locs Pass1::normalLocs after opt
+		Conn	DevType	Addr	Len	Dup	iB.type	iB.ml	type	pData	pPreDt	pUpdate	useUpdate
+0:  	1		64			0		1		5		2			0		0		0		0			0			0
+1:  	1		194			0		0		3		0			0		0		0		0			0			0
+
+Locs BuildLocs (readCmd) before opt
+		Conn	DevType	Addr	Len	Dup	iB.type	iB.ml	type	pData	pPreDt	pUpdate	useUpdate
+0:  	1		194			0		0		3		0			0		0		0		0			0			0
+1:  	1		192			1		0		1		0			0		0		0		0			0			0
+2:  	1		192			0		0		1		0			0		0		0		0			0			0
+3:  	1		192			2		0		1		0			0		0		0		0			0			0
+4:  	1		192			3		0		1		0			0		0		0		0			0			0
+5:  	1		192			8		0		1		0			0		0		0		0			0			0
+
+Locs BuildLocs (readCmd) aft opt
+		Conn	DevType	Addr	Len	Dup	iB.type	iB.ml	type	pData	pPreDt	pUpdate	useUpdate
+0:  	1		64			0		1		5		2			0		0		0		0			0			0
+1:  	1		194			0		0		3		0			0		0		0		0			0			0
+
+Locs ***
+		Conn	DevType	Addr	Len	Dup	iB.type	iB.ml	type	pData	pPreDt	pUpdate	useUpdate
+0:  	1		64			0		1		5		2			0		0		8		0			0			0
+1:  	1		194			0		0		3		0			0		0		0		0			0			0
+
+Locs Object Relocate Result
+		Conn	DevType	Addr	Len	Dup	iB.type	iB.ml	type	pData	pPreDt	pUpdate	useUpdate
+0:  	1		194			0		0		3		0			0		0		24		25			5			0
+1:  	1		192			1		0		1		0			0		0		9		28			0			0
+2:  	1		192			0		0		1		0			0		0		8		29			1			0
+3:  	1		192			2		0		1		0			0		0		10		30			2			0
+4:  	1		192			3		0		1		0			0		0		11		31			3			0
+5:  	1		192			8		0		1		0			0		0		16		32			4			0
+
+*****	194	0	0	 nBytes = 1			24	 25	 5	Refresh Rate = 0
+*****	192	1	0	 nBytes = 1			9	 28	 0	Refresh Rate = 0
+*****	192	0	0	 nBytes = 1			8	 29	 1	Refresh Rate = 0
+*****	192	2	0	 nBytes = 1			10	 30	 2	Refresh Rate = 0
+*****	194	0	0	 nBytes = 1			24	 26	 6	Refresh Rate = 0
+*****	194	0	0	 nBytes = 1			24	 27	 7	Refresh Rate = 0
+*****	192	3	0	 nBytes = 1			11	 31	 3	Refresh Rate = 0
+*****	192	8	0	 nBytes = 1			16	 32	 4	Refresh Rate = 0
+PsReadCmd1  1			64			0			0		8		0		1		5
+PsReadCmd1  1			194			0			0		24		5		0		3
